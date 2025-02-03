@@ -1,0 +1,55 @@
+<html>
+<head>
+<style>
+body {
+  background-image: url('wallpaper.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;}
+</style> 
+<title>Registration Page</title>
+
+<body  style="background-color:#ede7c9">
+
+<h1> <center> <u> Registration Page </u> </center></h1>
+<h2> <center> <b> Please enter your Name, Email id and Password </b> </center> </h2>
+<center> <p> <i> First Name  </i> </p> <input type="text">
+<center> <p> <i> Middle Name (optional) </i> </p> 
+<input type="text">
+<center> <p> <i> Last Name </i> </p> 
+<input type="text">
+<center> <p> <i> Email id </i> </p> 
+<input type="email" id="username"> </center>
+<center> <p> <i> Date of Birth </i> </p> 
+<input type="date"> </center>
+<center> <p> <i> Password </i> </p> 
+<input type="password" id="password"> </center>
+<center> <p> <i> Confirm Password </i> </p> 
+<input type="password"> <br> <br>
+<button onclick="savedata()">submit</button>
+<br><br>
+
+
+<script>
+function savedata()
+{
+
+let username = document.getElementById("username").value;
+
+let password = document.getElementById("password").value;
+
+localStorage.setItem("username", username);
+
+localStorage.setItem("password", password);
+
+alert(localStorage.getItem("username"));
+
+alert(localStorage.getItem("password"));
+window.location.href="loginanu.html";
+}
+</script>
+
+
+
+</body>
+</html>
